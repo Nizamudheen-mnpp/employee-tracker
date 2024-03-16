@@ -14,4 +14,11 @@ class User extends Model
         'fk_designation',
         'phone_number',
     ];
+
+    public function department(){
+        return $this->hasOne(Department::class,'id','fk_department');
+    }
+    public function designation(){
+        return $this->hasOne(Designation::class,'id','fk_designation');
+    }
 }

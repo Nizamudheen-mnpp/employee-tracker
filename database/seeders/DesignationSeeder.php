@@ -13,8 +13,11 @@ class DesignationSeeder extends Seeder
      */
     public function run(): void
     {
-        Designation::create([
-            'name' => 'Manager',
-        ]);
+        Designation::create(['name' => 'Manager']);
+        Designation::create(['name' => 'Team Leader']);
+        Designation::create(['name' => 'Senior Developer']);
+        Designation::create(['name' => 'HR Executive']);
+        Designation::create(['name' => 'Accountant']);
+        
     }
 }

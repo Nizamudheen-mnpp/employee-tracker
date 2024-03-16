@@ -13,11 +13,14 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'name' => 'John Doe',
-            'fk_department' => 1,
-            'fk_designation' => 1,
-            'phone_number' => '998776655',
-        ]);
+        for ($i = 1; $i <= 10; $i++) {
+            User::create([
+                'name' => 'User ' . $i,
+                'fk_department' => rand(1, 5),
+                'fk_designation' => rand(1, 5),
+                'phone_number' => '99988877' . $i,
+            ]);
+        }
+        
     }
 }
